@@ -12,7 +12,8 @@ class SchoolclassController extends Controller
      */
     public function index()
     {
-        //
+        $data = Schoolclass::all();
+        return view('index', compact('data'));
     }
 
     /**
@@ -28,7 +29,10 @@ class SchoolclassController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Schoolclass::create([
+            'classes' => $request->class
+        ]);
+        return redirect('/class');
     }
 
     /**
