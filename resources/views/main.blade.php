@@ -30,16 +30,16 @@
         <div class="card-body">
             <h3 class="card-title text-center mb-4">Welcome Teachers</h3>
 
-            <form action="/login" method="POST">
+            <form action="/class" method="POST">
                 @csrf
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
-                    <input type="text" name="username" class="form-control" id="username" placeholder="Enter your username" required>
+                    <input type="text" name="username" class="form-control" id="username" value = "Aiman" placeholder="Enter your username" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" name="password" class="form-control" id="password" placeholder="Enter your password" required>
+                    <input type="password" name="password" class="form-control" id="password" value = "123456" placeholder="Enter your password" required>
                 </div>
 
                 <div class="mb-3 form-check">
