@@ -30,7 +30,7 @@
         <div class="card-body">
             <h3 class="card-title text-center mb-4">Welcome Teachers</h3>
 
-            <form action="/class" method="POST">
+            <form action="{{ route('class.index') }}" method="GET">
                 @csrf
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>

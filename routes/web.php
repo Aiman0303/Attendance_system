@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 
-Route::get('/class', [SchoolClassController::class, 'index']);
-Route::post('/class', [SchoolClassController::class, 'store']);
+Route::get('/class', [SchoolClassController::class, 'index'])->name('class.index');
+
+Route::post('/class', [SchoolClassController::class, 'store'])->name('class.store');
 
