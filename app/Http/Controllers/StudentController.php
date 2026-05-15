@@ -10,10 +10,10 @@ class StudentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function StudentPortal()
     {
         $attendance = student::all();
-        return view('student.index', compact('attendance'));
+        return view('portal', compact('attendance'));
     }
 
     /**
@@ -36,7 +36,7 @@ class StudentController extends Controller
         ]);
 
         student::create($validate);
-        return redirect()->route('student.index');
+        return redirect()->route('portal');
     }
 
     /**
