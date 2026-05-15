@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('Name');
             $table->integer('Contact');
             $table->boolean('Status');
+            $table->string('class');
             $table->timestamps();
         });
     }
