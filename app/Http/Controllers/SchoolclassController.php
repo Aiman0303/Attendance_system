@@ -30,7 +30,7 @@ class SchoolclassController extends Controller
     public function store(Request $request)
     {
         Schoolclass::create([
-            'Classes' => $request->class
+            'classes' => $request->class
         ]);
         return redirect()->route('class.index');
     }
