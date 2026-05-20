@@ -28,14 +28,37 @@
             <div class="mb-3">
                 <label for="contact" class="form-label">Contact Number</label>
                 <input type="text" class="form-control" id="Contact" name="Contact" placeholder="Enter Contact number" required>
+            </div>
 
-                <div class="mb-3">
-                <label for="class" class="form-label">Class</label>
-                <input type="text" class="form-control" id="class" name="class" placeholder="Enter Student class" required>
-            </div>
-            </div>
+            <div class="mb-3">
+                    <label for="class" class="form-label">Class</label>
+                    <input type="text" class="form-control" id="class" name="class" placeholder="Enter Student class" required>
+                </div>
         </form>
 
+        <div class="container">
+            <h1 class="text-center">STUDENTS</h1>
+        </div>
+
+        <!--function for display students-->
+
+        <!--student table-->
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>No</th>
+                        <th>IC.No</th>
+                        <th>Name</th>
+                        <th>Contact</th>
+                        <th>Class</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                
+                        
+        </div>
 
     </div>
 </body>

@@ -52,8 +52,8 @@
         </form>
 
         <!--class list-->
-        <div class="grid-box">
-            <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+        <div class="d-grid gap-4 mt-3">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
                 @foreach ($data as $item)
                     <div class="col">
                         <div class="card h-100">
