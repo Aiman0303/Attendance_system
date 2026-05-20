@@ -13,3 +13,5 @@ Route::post('/class', [SchoolClassController::class, 'store'])->name('class.stor
 
 //student route
 Route::get('/student', [StudentController::class, 'StudentPortal'])->name('portal');
+
+Route::post('/student',[StudentController::class, 'store'])->name('student.store');
