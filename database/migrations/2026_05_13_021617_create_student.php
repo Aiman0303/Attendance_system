@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('student', function (Blueprint $table) {
             $table->id();
-            $table->integer('IC');
-            $table->string('Name');
-            $table->integer('Contact');
-            $table->boolean('Status');
-            $table->string('class');
+            $table->string('IC', 20)->unique();
+            $table->string('Name', 255);
+            $table->string('Contact', 20);
+            $table->boolean('Status')->nullable()->default(0);
+            $table->string('class', 100);
             $table->timestamps();
         });
     }

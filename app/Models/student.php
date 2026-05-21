@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     protected $table = 'student';
-    protected $fillable = ['ic', 'name', 'contact', 'class']; // Match the new lowercase columns
+    protected $fillable = ['IC', 'Name', 'Contact', 'class']; // Match the new lowercase columns
 }

@@ -15,9 +15,14 @@ Route::post('/class', [SchoolClassController::class, 'store'])->name('class.stor
 //register route
 Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('register');
 
-Route::post('/register', [StudentController::class, 'store'])->name('student.store');
+Route::post('/register', [RegisterController::class, 'store'])->name('student.store');
 
 
 //student route
 Route::get('/portal', [StudentController::class, 'StudentPortal'])->name('portal');
 
+//attendance update route
+Route::put('/attendance/{id}', [RegisterController::class, 'update'])->name('attendance.update');
+
+//attendance delete route
+Route::delete('/attendance/{id}', [RegisterController::class, 'destroy'])->name('attendance.delete');
