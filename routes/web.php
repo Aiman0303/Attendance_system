@@ -6,6 +6,11 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\RegisterController;
 
+/*test*/
+Route::get('/', function () {
+    return view('welcome');
+});
+
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 
 Route::get('/class', [SchoolClassController::class, 'index'])->name('class.index');

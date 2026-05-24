@@ -45,8 +45,8 @@
         <form action="{{ route('class.store') }}" method="POST">
             @csrf
             <div class="mb-3">
-                <label for="class" class="form-label">Class Name</label>
-                <input type="text" class="form-control" id="class" name="class" placeholder="Enter class name" required>
+                <label for="classes" class="form-label">Class Name</label>
+                <input type="text" class="form-control" id="classes" name="classes" placeholder="Enter class name" required>
             </div>
             <button type="submit" class="btn btn-primary">Add Class</button>
         </form>
