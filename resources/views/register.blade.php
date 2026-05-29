@@ -118,12 +118,12 @@
                 </li>
                 <li>
                     <a href="./register" class="nav-link active py-2.5 px-3">
-                        <i class="fa-solid fa-user-graduate me-3"></i>Students Registration
+                        <i class="fa-solid fa-user-graduate me-3"></i>Student Registration
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link py-2.5 px-3">
-                        <i class="fa-solid fa-clipboard-user me-3"></i>Attendance
+                    <a href="{{route ('class.index')}}" class="nav-link py-2.5 px-3">
+                        <i class="fa-solid fa-clipboard-user me-3"></i>Student Class
                     </a>
                 </li>
                 <li>
@@ -165,9 +165,9 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="class" class="form-label">Select Class</label>
+                        <label for="class" class="form-label">Select Class: </label>
                             <select name="class" id="class" required>
-                                <option value="">-- Select a Class --</option>
+                                <option value="">-- Select a Class --</option >
                                 @foreach($classes as $class)
                                     <option value="{{ $class->classes }}"     {{ old('class') == $class->name ? 'selected' : '' }}> {{ $class->classes }}
                                     </option>

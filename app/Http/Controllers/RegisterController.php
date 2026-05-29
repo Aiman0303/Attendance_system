@@ -32,7 +32,7 @@ class RegisterController extends Controller
     {
         $attendance = student::findOrFail($id);
 
-        $attendance->status = $request->status;
+        $attendance->status = $request->input('status');
         $attendance->save();
         return redirect()->back()->with('success', 'Data updated!');
     }

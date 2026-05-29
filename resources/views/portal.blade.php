@@ -45,14 +45,14 @@
             color: #333;
         }
 
-        .table tr.green-row td {
-            background-color: #d1e7dd !important;
-            color: #0f5132;
+        .table > tbody > tr.green-row > td {
+            background-color: #d1e7dd !important; /* Soft, premium light green background */
+            color: #0f5132 !important;            /* Dark green text - high contrast! */
         }
 
-        .table tr.red-row td {
-            background-color: #f8d7da !important;
-            color: #842029;
+        .table > tbody > tr.red-row > td {
+            background-color: #f8d7da !important; /* Soft, premium light red background */
+            color: #842029 !important;            /* Dark red text - high contrast! */
         }
 
         /* MOBILE RESPONSIVE MEDIA QUERIES (< 992px) */
@@ -114,12 +114,12 @@
                 </li>
                 <li>
                     <a href="./register" class="nav-link py-2.5 px-3">
-                        <i class="fa-solid fa-user-graduate me-3"></i>Students Registration
+                        <i class="fa-solid fa-user-graduate me-3"></i>Student Registration
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link py-2.5 px-3">
-                        <i class="fa-solid fa-clipboard-user me-3"></i>Attendance
+                    <a href="{{route ('class.index')}}" class="nav-link py-2.5 px-3">
+                        <i class="fa-solid fa-clipboard-user me-3"></i>Student Class
                     </a>
                 </li>
                 <li>
@@ -194,6 +194,41 @@
                                                     </form>
                                                 </div>
                                             </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>    
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid p-3 p-md-4 flex-grow-1">
+                <div class="text-center mb-4 mt-2 mt-lg-0">
+                    <h1 class="fw-bold tracking-tight m-0 py-2">STUDENTS</h1>
+                </div>
+
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-3 p-md-4">
+                        <div class="table-responsive">
+                            <table class="table table-striped align-middle m-0">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>No</th>
+                                        <th>IC.No</th>
+                                        <th>Name</th>
+                                        <th>Contact</th>
+                                        <th>Class</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($attendance as $student)
+                                        <tr data-student-id="{{ $student->id }}" class="{{ $student->Status == 1 ? 'green-row' : ($student->Status == 2 ? 'red-row' : '') }}">
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $student->IC }}</td>
+                                            <td class="text-nowrap fw-semibold">{{ $student->Name }}</td>
+                                            <td>{{ $student->Contact }}</td>
+                                            <td>{{ $student->class }}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>    
