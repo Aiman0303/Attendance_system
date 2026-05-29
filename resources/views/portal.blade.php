@@ -114,7 +114,7 @@
                 </li>
                 <li>
                     <a href="./register" class="nav-link py-2.5 px-3">
-                        <i class="fa-solid fa-user-graduate me-3"></i>Students List
+                        <i class="fa-solid fa-user-graduate me-3"></i>Students Registration
                     </a>
                 </li>
                 <li>

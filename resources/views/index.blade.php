@@ -58,7 +58,7 @@
                     <div class="col">
                         <div class="card h-100">
                             <div class="card-body">
-                                <a href="#" class="card-title stretched-link text-decoration-none">{{ $item->classes }}</a>
+                                <a href="{{route ('portal')}}" class="card-title stretched-link text-decoration-none">{{ $item->classes }}</a>
                             </div>
                         </div>
                     </div>
