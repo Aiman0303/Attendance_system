@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use App\Models\Register;
 use App\Models\student;
 use Illuminate\Http\Request;
+use App\Models\Schoolclass;
 
 class RegisterController extends Controller
 {
     public function showRegisterForm()
     {
-        return view('register');
+        $classes=Schoolclass::all();
+        return view('register', compact('classes'));
     }
 
     public function store(Request $request)

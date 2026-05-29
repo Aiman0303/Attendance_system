@@ -165,8 +165,14 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="class" class="form-label">Class</label>
-                        <input type="text" class="form-control" id="class" name="class" placeholder="Enter Student class" required>
+                        <label for="class" class="form-label">Select Class</label>
+                            <select name="class" id="class" required>
+                                <option value="">-- Select a Class --</option>
+                                @foreach($classes as $class)
+                                    <option value="{{ $class->classes }}"     {{ old('class') == $class->name ? 'selected' : '' }}> {{ $class->classes }}
+                                    </option>
+                                @endforeach
+                            </select>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Register</button>
